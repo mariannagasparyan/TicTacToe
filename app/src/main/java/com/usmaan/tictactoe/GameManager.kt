@@ -11,7 +11,7 @@ class GameManager {
             return if (currentPlayer == 1) "X" else "O"
         }
 
-    private var state = arrayOf(
+    private var state = arrayOf( // 2D Array
         intArrayOf(0, 0, 0),
         intArrayOf(0, 0, 0),
         intArrayOf(0, 0, 0)
@@ -33,8 +33,17 @@ class GameManager {
         return winningLine
     }
 
+    fun reset() {
+        state = arrayOf(
+            intArrayOf(0, 0, 0),
+            intArrayOf(0, 0, 0),
+            intArrayOf(0, 0, 0)
+        )
+        currentPlayer = 1
+    }
+
     private fun hasGameEnded(): WinningLine? {
-        if (state[0][0] == 1 && state[0][1] == 1 && state[0][2] == 1) {
+        if (state[0][0] == currentPlayer && state[0][1] == currentPlayer && state[0][2] == currentPlayer) {
             return WinningLine.ROW_0
         } else if (state[1][0] == currentPlayer && state[1][1] == currentPlayer && state[1][2] == currentPlayer) {
             return WinningLine.ROW_1
@@ -74,14 +83,5 @@ class GameManager {
         }
 
         return true
-    }
-
-    fun reset() {
-        state = arrayOf(
-            intArrayOf(0, 0, 0),
-            intArrayOf(0, 0, 0),
-            intArrayOf(0, 0, 0)
-        )
-        currentPlayer = 1
     }
 }
