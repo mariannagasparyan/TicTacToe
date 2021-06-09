@@ -8,21 +8,37 @@
     tools:context=".GameActivity">
 
     <TextView
+        android:id="@+id/titleTex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/app_name"
+        android:textColor="@color/colorPrimary"
+        android:textSize="36sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
         android:id="@+id/player_one_score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Player 1 Points:"
-        android:textSize="18dp"
+        android:textColor="@color/colorPrimary"
+        android:text="Player1"
+        android:layout_marginTop="40dp"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/titleTex" />
 
     <TextView
         android:id="@+id/player_two_score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:text="Player 2 Points:"
-        android:textSize="18dp"
+        android:textColor="@color/colorPrimary"
+        android:text="Player2"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/player_one_score" />
 
@@ -41,7 +57,7 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:gravity="center"
-        android:textColor="#000000"
+        android:textColor="@color/colorPrimary"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -53,7 +69,7 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:gravity="center"
-        android:textColor="#000000"
+        android:textColor="@color/colorPrimary"
         android:textSize="36sp"
         app:layout_constraintEnd_toStartOf="@+id/nine"
         app:layout_constraintHorizontal_bias="0.5"
@@ -65,7 +81,7 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:gravity="center"
-        android:textColor="#000000"
+        android:textColor="@color/colorPrimary"
         android:textSize="36sp"
         app:layout_constraintEnd_toStartOf="@+id/five"
         app:layout_constraintHorizontal_bias="0.5"
@@ -78,7 +94,7 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:gravity="center"
-        android:textColor="#000000"
+        android:textColor="@color/colorPrimary"
         android:textSize="36sp"
         app:layout_constraintEnd_toStartOf="@+id/eight"
         app:layout_constraintHorizontal_bias="0.5"
@@ -92,7 +108,7 @@
         android:layout_height="80dp"
         android:layout_marginTop="208dp"
         android:gravity="center"
-        android:textColor="#000000"
+        android:textColor="@color/colorPrimary"
         android:textSize="36sp"
         app:layout_constraintEnd_toStartOf="@+id/two"
         app:layout_constraintHorizontal_bias="0.5"
@@ -106,7 +122,7 @@
         android:layout_height="80dp"
         android:layout_marginTop="208dp"
         android:gravity="center"
-        android:textColor="#000000"
+        android:textColor="@color/colorPrimary"
         android:textSize="36sp"
         app:layout_constraintEnd_toStartOf="@+id/three"
         app:layout_constraintHorizontal_bias="0.5"
@@ -119,7 +135,7 @@
         android:layout_height="80dp"
         android:layout_marginTop="208dp"
         android:gravity="center"
-        android:textColor="#000000"
+        android:textColor="@color/colorPrimary"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -131,7 +147,7 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:gravity="center"
-        android:textColor="#000000"
+        android:textColor="@color/colorPrimary"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -143,7 +159,7 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:gravity="center"
-        android:textColor="#000000"
+        android:textColor="@color/colorPrimary"
         android:textSize="36sp"
         app:layout_constraintEnd_toStartOf="@+id/six"
         app:layout_constraintHorizontal_bias="0.5"
@@ -159,6 +175,30 @@
         app:layout_constraintEnd_toStartOf="@+id/two"
         app:layout_constraintStart_toEndOf="@+id/one"
         app:layout_constraintTop_toTopOf="@+id/one" />
+
+    <View
+        android:id="@+id/view11"
+        android:layout_width="4dp"
+        android:layout_height="0dp"
+        android:background="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/seven"
+        app:layout_constraintEnd_toStartOf="@+id/two"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/four"
+        app:layout_constraintTop_toTopOf="@+id/one"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <View
+        android:id="@+id/view12"
+        android:layout_width="4dp"
+        android:layout_height="0dp"
+        android:background="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/seven"
+        app:layout_constraintEnd_toEndOf="@+id/six"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/four"
+        app:layout_constraintTop_toTopOf="@+id/one"
+        app:layout_constraintVertical_bias="0.0" />
 
     <View
         android:id="@+id/view2"
@@ -181,15 +221,42 @@
         app:layout_constraintTop_toBottomOf="@+id/two" />
 
 
+    <View
+        android:id="@+id/view31"
+        android:layout_width="0dp"
+        android:layout_height="4dp"
+        android:background="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/eight"
+        app:layout_constraintEnd_toEndOf="@+id/view4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/seven"
+        app:layout_constraintTop_toBottomOf="@+id/two"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <View
+        android:id="@+id/view32"
+        android:layout_width="0dp"
+        android:layout_height="4dp"
+        android:background="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/eight"
+        app:layout_constraintEnd_toEndOf="@+id/three"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/one"
+        app:layout_constraintTop_toTopOf="@+id/two"
+        app:layout_constraintVertical_bias="0.0" />
+
     <Button
         android:id="@+id/start_new_game_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Start new game"
-        android:visibility="gone"
+        android:text="@string/startAgain"
+        android:textColor="#fff"
+        android:textStyle="bold|italic"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/eight" />
+        app:layout_constraintTop_toBottomOf="@id/eight"
+        android:backgroundTint="@color/colorPrimary"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

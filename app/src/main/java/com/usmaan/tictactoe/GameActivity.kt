@@ -1,10 +1,12 @@
 package com.usmaan.tictactoe
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.core.content.ContextCompat
 
 class GameActivity : AppCompatActivity() {
@@ -62,8 +64,8 @@ class GameActivity : AppCompatActivity() {
     }
 
     private fun updatePoints() {
-        player1Points.text = "Player X Points: ${gameManager.player1Points}"
-        player2Points.text = "Player O Points: ${gameManager.player2Points}"
+        player1Points.text = "X - Խաղացող 1: Միավոր ${gameManager.player1Points}"
+        player2Points.text = "O - Խաղացող 2: Միավոր ${gameManager.player2Points}"
     }
 
 
@@ -107,6 +109,9 @@ class GameActivity : AppCompatActivity() {
                 startNewGameButton.visibility = View.VISIBLE
                 showWinner(winningLine)
             }
+            else{
+                startNewGameButton.visibility = View.VISIBLE
+            }
         }
     }
 
@@ -139,7 +144,7 @@ class GameActivity : AppCompatActivity() {
         }
 
         winningBoxes.forEach { box ->
-            box.background = ContextCompat.getDrawable(GameActivity@ this, background)
+            box.background = ContextCompat.getDrawable(this, background)
         }
     }
 }

@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">TicTacToe</string>
+    <string name="app_name">Իքս-նոլիկ</string>
+    <string name="startNew">Սկսել խաղը</string>
+    <string name="startAgain">Սկսել նոր խաղ</string>
 </resources>
