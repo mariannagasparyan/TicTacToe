@@ -31,6 +31,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/titleTex" />
 
+
     <TextView
         android:id="@+id/player_two_score"
         android:layout_width="wrap_content"
@@ -258,5 +259,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/eight"
         android:backgroundTint="@color/colorPrimary"/>
+
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Վերադառնալ գլխավոր էջ"
+        android:textColor="#fff"
+        android:textStyle="bold|italic"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/start_new_game_button"
+        android:backgroundTint="@color/colorPrimary" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

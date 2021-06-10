@@ -22,17 +22,38 @@
         android:textColor="@color/colorPrimary"
         />
 
+
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="182dp"
+        android:layout_width="wrap_content"
         android:layout_height="183dp"
-        android:layout_marginTop="148dp"
+        android:layout_marginTop="64dp"
+        android:src="@drawable/xo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleTextView"
-        android:src="@drawable/tictactoe" />
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
 
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Մասնակից 1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+    <EditText
+        android:id="@+id/editTextName2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Մասնակից 2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextName" />
     <Button
         android:id="@+id/startNewGameButton"
         android:layout_width="wrap_content"
@@ -44,8 +65,7 @@
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/editTextName"
         android:backgroundTint="@color/colorPrimary"/>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

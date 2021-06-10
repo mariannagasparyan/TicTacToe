@@ -1,6 +1,7 @@
 package com.usmaan.tictactoe
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -22,6 +23,7 @@ class GameActivity : AppCompatActivity() {
     private lateinit var eight: TextView
     private lateinit var nine: TextView
     private lateinit var startNewGameButton: Button
+    private lateinit var newButtonBack: Button
     private lateinit var player1Points: TextView
     private lateinit var player2Points: TextView
 
@@ -43,6 +45,7 @@ class GameActivity : AppCompatActivity() {
         startNewGameButton = findViewById(R.id.start_new_game_button)
         player1Points = findViewById(R.id.player_one_score)
         player2Points = findViewById(R.id.player_two_score)
+        newButtonBack=findViewById(R.id.buttonBack)
 
         one.setOnClickListener { onBoxClicked(one, Position(0, 0)) }
         two.setOnClickListener { onBoxClicked(two, Position(0, 1)) }
@@ -55,17 +58,27 @@ class GameActivity : AppCompatActivity() {
         nine.setOnClickListener { onBoxClicked(nine, Position(2, 2)) }
 
         startNewGameButton.setOnClickListener {
-            startNewGameButton.visibility = View.GONE
+            startNewGameButton.visibility= View.GONE
             gameManager.reset()
             resetboxes()
         }
 
+        newButtonBack.setOnClickListener{
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
         updatePoints()
     }
 
     private fun updatePoints() {
-        player1Points.text = "X - Խաղացող 1: Միավոր ${gameManager.player1Points}"
-        player2Points.text = "O - Խաղացող 2: Միավոր ${gameManager.player2Points}"
+        var intent=intent
+        val name=intent.getStringExtra("Name")
+        val result=findViewById<TextView>(R.id.player_one_score)
+        result.text=name
+        val name1=intent.getStringExtra("Name1")
+        val result1=findViewById<TextView>(R.id.player_two_score)
+        player1Points.text = "X - $name Միավոր ${gameManager.player1Points}"
+        player2Points.text = "0 - $name1  Միավոր ${gameManager.player2Points}"
     }
 
 
@@ -111,6 +124,7 @@ class GameActivity : AppCompatActivity() {
             }
             else{
                 startNewGameButton.visibility = View.VISIBLE
+                newButtonBack.visibility=View.VISIBLE
             }
         }
     }
